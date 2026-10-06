@@ -1,0 +1,70 @@
+<%- include('partials/header', { title, currentUser, notice, error }) %>
+<link rel="stylesheet" href="/jwt-demo.css">
+
+<section class="jwt-page" aria-labelledby="jwt-title">
+  <div class="jwt-heading">
+    <div>
+      <p class="jwt-kicker">MICROSERVICIO BOOK</p>
+      <h1 id="jwt-title">Consola de peticiones</h1>
+    </div>
+    <span id="auth-state" class="jwt-state" aria-live="polite">Sin autenticar</span>
+  </div>
+
+  <section class="jwt-auth" aria-label="Autenticacion">
+    <form id="login-form" class="jwt-login">
+      <label>Usuario o correo<input name="identity" autocomplete="username" required></label>
+      <label>Contrasena<input name="password" type="password" autocomplete="current-password" required></label>
+      <button type="submit">Iniciar sesion</button>
+    </form>
+    <div class="jwt-session-actions">
+      <button id="session-button" type="button">Consultar session</button>
+      <button id="logout-button" type="button" disabled>Cerrar sesion</button>
+    </div>
+  </section>
+
+  <section class="jwt-workbench" aria-label="Solicitud al servicio book">
+    <div class="jwt-workbench-head">
+      <h2>Solicitud</h2>
+      <button id="public-list-button" type="button" class="quiet-button">GET publico</button>
+    </div>
+    <div class="jwt-controls">
+      <label>Metodo<select id="method"><option>GET</option><option>POST</option><option>PUT</option><option>PATCH</option><option>DELETE</option></select></label>
+      <label>ISBN<input id="isbn" maxlength="17" placeholder="Solo para un libro"></label>
+    </div>
+    <label class="jwt-payload-label" for="payload">Payload JSON</label>
+    <textarea id="payload" spellcheck="false">{
+  "isbn": "978-0000000000",
+  "title": "Libro temporal JWT",
+  "publication_year": 2026,
+  "price": 10.00,
+  "stock": 1,
+  "format_id": 1,
+  "category_id": 1,
+  "authors": []
+}</textarea>
+    <div class="jwt-submit-row">
+      <div class="jwt-demo-options">
+        <label class="jwt-checkbox"><input id="without-token" type="checkbox"> Omitir JWT</label>
+        <label class="jwt-checkbox"><input id="manipulate-token" type="checkbox"> Manipular JWT</label>
+        <label class="jwt-checkbox"><input id="reuse-revoked-token" type="checkbox"> Reutilizar JWT revocado</label>
+      </div>
+      <button id="send-button" type="button">Enviar solicitud</button>
+    </div>
+    <p id="workbench-status" class="jwt-inline-status" aria-live="polite"></p>
+  </section>
+
+  <section class="jwt-console" aria-label="Registro de peticiones">
+    <div class="jwt-console-head">
+      <div><h2>Registro</h2><span id="request-count">0 peticiones</span></div>
+      <div class="jwt-console-actions">
+        <button id="copy-log" type="button" title="Copiar registro">Copiar</button>
+        <button id="export-log" type="button" title="Exportar registro">Exportar</button>
+        <button id="clear-log" type="button" title="Limpiar registro">Limpiar</button>
+      </div>
+    </div>
+    <ol id="request-log" class="jwt-log" aria-live="polite"></ol>
+  </section>
+</section>
+
+<script src="/jwt-demo.js" defer></script>
+<%- include('partials/footer') %>

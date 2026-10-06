@@ -1,0 +1,71 @@
+{
+  "name": "local",
+  "base_url": "http://127.0.0.1:5101",
+  "isbn": "9781790115389",
+  "steps": {
+    "health": {
+      "status": 200,
+      "body": {
+        "message": "Flask y PostgreSQL disponibles",
+        "status": "ok"
+      }
+    },
+    "POST": {
+      "status": 201,
+      "body": {
+        "isbn": "9781790115389",
+        "message": "Libro creado"
+      }
+    },
+    "GET_after_POST": {
+      "status": 200,
+      "body": {
+        "authors": "Autor de Prueba",
+        "category": "Literature",
+        "category_id": 1,
+        "format": "Hardcover",
+        "format_id": 1,
+        "images": [],
+        "isbn": "9781790115389",
+        "price": "125.50",
+        "publication_year": 2026,
+        "stock": 3,
+        "title": "Evidencia de ciclo API"
+      }
+    },
+    "PATCH": {
+      "status": 200,
+      "body": {
+        "message": "Libro actualizado"
+      }
+    },
+    "GET_after_PATCH": {
+      "status": 200,
+      "body": {
+        "authors": "Autor de Prueba",
+        "category": "Literature",
+        "category_id": 1,
+        "format": "Hardcover",
+        "format_id": 1,
+        "images": [],
+        "isbn": "9781790115389",
+        "price": "140.75",
+        "publication_year": 2026,
+        "stock": 3,
+        "title": "Evidencia de ciclo API actualizada"
+      }
+    },
+    "DELETE": {
+      "status": 200,
+      "body": {
+        "message": "Libro eliminado"
+      }
+    },
+    "GET_after_DELETE": {
+      "status": 404,
+      "body": {
+        "error": "Libro no encontrado"
+      }
+    }
+  }
+}

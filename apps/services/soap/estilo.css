@@ -1,0 +1,934 @@
+/* ============================================================
+   PROFESSIONAL & CORPORATE LIBRARY XML PRESENTATION STYLE
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #2c3e50;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* ============================================================
+   LIBRARY HEADER (XSL HTML Output)
+   ============================================================ */
+
+.library-header {
+    background: linear-gradient(135deg, #1a4d7a 0%, #2c5f99 100%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+}
+
+.library-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.library-subtitle {
+    font-size: 1.1em;
+    color: rgba(255, 255, 255, 0.9);
+    font-style: italic;
+    margin: 0;
+}
+
+.library-footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #f8f9fa;
+    border-top: 2px solid #e74c3c;
+    color: #666;
+    font-size: 0.95em;
+    margin-top: 40px;
+}
+
+/* ============================================================
+   BOOK CARD (HTML from XSL)
+   ============================================================ */
+
+.book-card {
+    display: block;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-left: 5px solid #1a4d7a;
+    padding: 0;
+}
+
+.book-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    border-left-color: #e74c3c;
+}
+
+/* ============================================================
+   BOOK HEADER & ISBN (HTML from XSL)
+   ============================================================ */
+
+.book-header {
+    background: linear-gradient(135deg, #1a4d7a 0%, #2c5f99 100%);
+    padding: 12px 18px;
+    border-bottom: 2px solid #e74c3c;
+}
+
+.isbn-badge {
+    display: block;
+    color: white;
+    font-size: 0.85em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* ============================================================
+   BOOK COVER IMAGE (HTML from XSL)
+   ============================================================ */
+
+.book-cover-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 15px;
+    min-height: 220px;
+    overflow: hidden;
+}
+
+.book-cover-image {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.book-cover-image:hover {
+    transform: scale(1.05);
+}
+
+/* ============================================================
+   BOOK CONTENT (HTML from XSL)
+   ============================================================ */
+
+.book-content {
+    padding: 18px;
+}
+
+/* ============================================================
+   TITLE (HTML from XSL)
+   ============================================================ */
+
+.book-title {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #1a4d7a;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+}
+
+/* ============================================================
+   AUTHORS (HTML from XSL)
+   ============================================================ */
+
+.book-authors {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 6px;
+}
+
+.authors-label {
+    font-weight: 600;
+    color: #2c3e50;
+    display: block;
+    width: 100%;
+    font-size: 0.95em;
+    margin-bottom: 6px;
+}
+
+.author-tag {
+    background: #ecf0f1;
+    color: #2c3e50;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    border-left: 3px solid #3498db;
+}
+
+.author-separator {
+    display: none;
+}
+
+/* ============================================================
+   YEAR (HTML from XSL)
+   ============================================================ */
+
+.book-year {
+    display: inline-block;
+    background: #fff3e0;
+    color: #e67e22;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.year-icon {
+    margin-right: 4px;
+}
+
+/* ============================================================
+   METADATA (HTML from XSL)
+   ============================================================ */
+
+.book-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.book-category {
+    color: #2980b9;
+    font-weight: 600;
+}
+
+.category-icon {
+    margin-right: 4px;
+}
+
+.book-genre {
+    color: #8e44ad;
+    font-weight: 600;
+}
+
+.genre-icon {
+    margin-right: 4px;
+}
+
+/* ============================================================
+   FORMAT (HTML from XSL)
+   ============================================================ */
+
+.book-format {
+    display: block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.format-icon {
+    margin-right: 4px;
+}
+
+/* ============================================================
+   PRICE & STOCK CONTAINER (HTML from XSL)
+   ============================================================ */
+
+.price-stock-container {
+    display: flex;
+    gap: 12px;
+    margin: 12px 0;
+    justify-content: space-between;
+}
+
+.book-price {
+    flex: 1;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #27ae60;
+    background: #e8f8f5;
+    padding: 10px 12px;
+    border-radius: 5px;
+    text-align: center;
+    border-left: 4px solid #27ae60;
+}
+
+.price-icon {
+    margin-right: 4px;
+}
+
+.currency {
+    font-size: 0.8em;
+    color: #95a5a6;
+    margin-left: 4px;
+}
+
+.book-stock {
+    flex: 1;
+    background: #e8f8f5;
+    color: #16a085;
+    padding: 10px 12px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    border-left: 4px solid #16a085;
+}
+
+.stock-icon {
+    margin-right: 4px;
+}
+
+.stock-unit {
+    font-size: 0.9em;
+    margin-left: 4px;
+}
+
+/* ============================================================
+   GALLERY (HTML from XSL)
+   ============================================================ */
+
+.book-gallery {
+    margin: 15px 0;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.gallery-title {
+    font-size: 0.95em;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+}
+
+.gallery-container {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+}
+
+.gallery-item {
+    flex: 0 0 100px;
+    height: 100px;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.1);
+}
+
+/* ============================================================
+   CONCEPTS (HTML from XSL)
+   ============================================================ */
+
+.book-concepts {
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 2px solid #ecf0f1;
+}
+
+.concepts-title {
+    font-size: 0.95em;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+}
+
+.concept-item {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-left: 4px solid #e67e22;
+}
+
+.concept-item:last-child {
+    margin-bottom: 0;
+}
+
+.concept-name {
+    display: block;
+    font-weight: 700;
+    color: #d35400;
+    font-size: 1em;
+    margin: 0 0 6px 0;
+}
+
+.concept-icon {
+    margin-right: 4px;
+}
+
+.concept-definition {
+    font-size: 0.9em;
+    color: #784f1b;
+    line-height: 1.5;
+    font-style: italic;
+    margin: 0;
+}
+
+.concept-definition::before {
+    content: "→ ";
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+/* ============================================================
+   ACTION BUTTON (HTML from XSL)
+   ============================================================ */
+
+.book-action {
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 2px solid #ecf0f1;
+}
+
+.action-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.action-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(39, 174, 96, 0.3);
+}
+
+.action-button:active {
+    transform: translateY(0);
+}
+
+/* ============================================================
+   BOOKS CONTAINER (Grid Layout)
+   ============================================================ */
+
+.books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 25px;
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================================
+   LIBRARY ROOT ELEMENT (XML Direct Display)
+   ============================================================ */
+
+Library {
+    display: block;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+Library::before {
+    content: "📚 ONLINE LIBRARY CATALOG";
+    display: block;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #1a4d7a;
+    margin-bottom: 10px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+Library::after {
+    content: "Professional Library Management System";
+    display: block;
+    font-size: 1em;
+    color: #666;
+    text-align: center;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+/* ============================================================
+   BOOKS CONTAINER (XML Direct Display)
+   ============================================================ */
+
+Books {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================================
+   INDIVIDUAL BOOK CARD
+   ============================================================ */
+
+Book {
+    display: block;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-left: 5px solid #1a4d7a;
+    padding: 0;
+}
+
+Book:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    border-left-color: #e74c3c;
+}
+
+/* ============================================================
+   ISBN AND HEADER
+   ============================================================ */
+
+ISBN {
+    display: block;
+    background: linear-gradient(135deg, #1a4d7a 0%, #2c5f99 100%);
+    color: white;
+    padding: 12px 18px;
+    font-size: 0.85em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    border-bottom: 2px solid #e74c3c;
+}
+
+ISBN::before {
+    content: "ISBN: ";
+    font-weight: 700;
+}
+
+/* ============================================================
+   BOOK CONTENT CONTAINER
+   ============================================================ */
+
+Book > Title,
+Book > Authors,
+Book > PublicationYear,
+Book > Category,
+Book > Genre,
+Book > Price,
+Book > Stock,
+Book > Format,
+Book > Images,
+Book > Concepts {
+    display: block;
+    padding: 0 18px;
+}
+
+Book > Title {
+    padding-top: 18px;
+}
+
+/* ============================================================
+   TITLE STYLING
+   ============================================================ */
+
+Title {
+    display: block;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #1a4d7a;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+/* ============================================================
+   AUTHORS STYLING
+   ============================================================ */
+
+Authors {
+    display: block;
+    margin-bottom: 12px;
+}
+
+Authors::before {
+    content: "✍️ Author(s): ";
+    font-weight: 600;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.95em;
+}
+
+Author {
+    display: inline-block;
+    background: #ecf0f1;
+    color: #2c3e50;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    margin-right: 8px;
+    margin-bottom: 6px;
+    border-left: 3px solid #3498db;
+}
+
+/* ============================================================
+   YEAR STYLING
+   ============================================================ */
+
+PublicationYear {
+    display: inline-block;
+    background: #fff3e0;
+    color: #e67e22;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+PublicationYear::before {
+    content: "📅 ";
+}
+
+/* ============================================================
+   CATEGORY & GENRE STYLING
+   ============================================================ */
+
+Category,
+Genre {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+Category::before {
+    content: "📂 Category: ";
+    font-weight: 600;
+    color: #2980b9;
+}
+
+Category {
+    color: #2980b9;
+}
+
+Genre::before {
+    content: "🎭 Genre: ";
+    font-weight: 600;
+    color: #8e44ad;
+}
+
+Genre {
+    color: #8e44ad;
+}
+
+/* ============================================================
+   PRICE STYLING
+   ============================================================ */
+
+Price {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #27ae60;
+}
+
+Price::before {
+    content: "💰 Price: ";
+    color: #27ae60;
+}
+
+Price::after {
+    content: " " attr(currency);
+    font-size: 0.8em;
+    color: #95a5a6;
+}
+
+/* ============================================================
+   STOCK STYLING
+   ============================================================ */
+
+Stock {
+    display: block;
+    background: #e8f8f5;
+    color: #16a085;
+    padding: 10px 12px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+    border-left: 4px solid #16a085;
+}
+
+Stock::before {
+    content: "📦 Stock: ";
+    font-weight: 700;
+}
+
+/* ============================================================
+   FORMAT STYLING
+   ============================================================ */
+
+Format {
+    display: block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+Format::before {
+    content: "📖 Format: ";
+}
+
+/* ============================================================
+   IMAGES STYLING
+   ============================================================ */
+
+Images {
+    display: block;
+    margin: 15px 0;
+}
+
+Images::before {
+    content: "🖼️ Book Images";
+    display: block;
+    font-weight: 700;
+    color: #2c3e50;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+Image {
+    display: block;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-left: 4px solid #3498db;
+}
+
+Image:last-child {
+    margin-bottom: 0;
+}
+
+URL {
+    display: block;
+    font-size: 0.85em;
+    color: #3498db;
+    word-break: break-all;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+URL::before {
+    content: "🔗 URL: ";
+    font-weight: 700;
+}
+
+AltText {
+    display: block;
+    font-size: 0.85em;
+    color: #7f8c8d;
+    font-style: italic;
+    margin-bottom: 4px;
+}
+
+AltText::before {
+    content: "📝 Alt Text: ";
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+IsCover {
+    display: inline-block;
+    font-size: 0.8em;
+    background: #ffe0e6;
+    color: #c0392b;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+IsCover::before {
+    content: "⭐ Cover: ";
+}
+
+/* ============================================================
+   CONCEPTS STYLING
+   ============================================================ */
+
+Concepts {
+    display: block;
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 2px solid #ecf0f1;
+}
+
+Concepts::before {
+    content: "💡 Key Concepts";
+    display: block;
+    font-weight: 700;
+    color: #2c3e50;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+Concept {
+    display: block;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-left: 4px solid #e67e22;
+}
+
+Concept:last-child {
+    margin-bottom: 0;
+}
+
+Concept > Name {
+    display: block;
+    font-weight: 700;
+    color: #d35400;
+    font-size: 1em;
+    margin-bottom: 6px;
+}
+
+Concept > Name::before {
+    content: "📌 ";
+}
+
+Concept > Definition {
+    display: block;
+    font-size: 0.9em;
+    color: #784f1b;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+Concept > Definition::before {
+    content: "→ ";
+    font-weight: 600;
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+
+@media (max-width: 768px) {
+    Library::before {
+        font-size: 1.8em;
+    }
+
+    Books {
+        grid-template-columns: 1fr;
+    }
+
+    Book {
+        margin-bottom: 10px;
+    }
+
+    Title {
+        font-size: 1.2em;
+    }
+
+    Price {
+        font-size: 1.1em;
+    }
+}
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================ */
+
+@media print {
+    body {
+        background: white;
+        padding: 10px;
+    }
+
+    Book {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+    }
+
+    Book:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+/* ============================================================
+   ACCESSIBILITY & ANIMATIONS
+   ============================================================ */
+
+@prefers-reduced-motion: reduce {
+    Book {
+        transition: none;
+    }
+
+    Book:hover {
+        transform: none;
+    }
+}
+
+/* ============================================================
+   SCROLLBAR STYLING (Webkit Browsers)
+   ============================================================ */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1a4d7a;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0d2740;
+}

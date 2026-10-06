@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Library Catalog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark" aria-hidden="true">L</div>
+    <div>
+      <p class="eyebrow">LIBRARY / DESKTOP</p>
+      <h1>Catálogo de libros</h1>
+    </div>
+    <div class="topbar-actions">
+      <span id="last-updated" class="last-updated">Sin sincronizar</span>
+      <button id="refresh-button" class="button button-primary" type="button">Actualizar catálogo</button>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="control-panel" aria-label="Configuración del catálogo">
+      <div>
+        <p class="section-label">Fuente XML</p>
+        <label class="endpoint-label" for="endpoint-input">Endpoint de libros</label>
+        <div class="endpoint-row">
+          <input id="endpoint-input" type="url" spellcheck="false" autocomplete="off">
+          <button id="save-endpoint" class="button button-secondary" type="button">Guardar URL</button>
+        </div>
+      </div>
+      <div class="catalog-summary">
+        <span class="summary-number" id="book-count">0</span>
+        <span class="summary-label">libros disponibles</span>
+      </div>
+    </section>
+
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+    <section id="catalog" class="catalog" aria-live="polite"></section>
+    <section id="empty-state" class="empty-state" hidden>
+      <div class="empty-icon" aria-hidden="true">+</div>
+      <h2>No hay libros para mostrar</h2>
+      <p>Comprueba la URL del servicio XML y vuelve a actualizar el catálogo.</p>
+    </section>
+
+    <nav class="pagination" aria-label="Paginación del catálogo">
+      <button id="previous-page" class="page-button" type="button" aria-label="Página anterior">&#8592;</button>
+      <span id="page-indicator">Página 1 de 1</span>
+      <button id="next-page" class="page-button" type="button" aria-label="Página siguiente">&#8594;</button>
+    </nav>
+  </main>
+  <script src="models/bookModel.js"></script>
+  <script src="views/catalogView.js"></script>
+  <script src="controllers/catalogController.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

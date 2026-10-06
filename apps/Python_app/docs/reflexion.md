@@ -1,0 +1,7 @@
+# Reflexión
+
+El desarrollo del microservicio permitió entender que una API no se evalúa únicamente por la cantidad de endpoints, sino por la coherencia de todo el ciclo de vida de los datos. Al principio el servicio contaba con operaciones `POST`, `GET`, `PUT` y `DELETE`; sin embargo, la evidencia solicitada exigía `PATCH`. Incorporar `PATCH` como método compatible, sin retirar `PUT`, conservó la compatibilidad con clientes existentes y alineó la implementación con el criterio de evaluación.
+
+La prueba local fue especialmente útil porque obligó a comprobar cada transición: crear un libro, leerlo, modificarlo, verificar el cambio, eliminarlo y confirmar que la consulta final devolviera `404`. Esa última respuesta es tan importante como el `201` inicial, porque demuestra que la prueba no dejó datos temporales en la base. También se comprobó el estado de PostgreSQL mediante `/api/health`, separando los errores de la aplicación de los errores de infraestructura.
+
+La ejecución remota dejó otra lección: una evidencia responsable también registra la indisponibilidad. El host documentado no respondió dentro del tiempo de espera, por lo que no se presentó una captura falsa ni se confundió un timeout con un resultado exitoso. La bitácora conserva esa limitación para que el resultado sea reproducible. Finalmente, separar credenciales en `.env`, dependencias en `requirements.txt` y pruebas en scripts hace que el proyecto sea más fácil de instalar, revisar y mantener.

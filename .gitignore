@@ -1,0 +1,22 @@
+node_modules/
+.venv/
+.venv*/
+venv/
+env/
+__pycache__/
+*.py[cod]
+
+# Secretos: solo se versionan las plantillas .env.example
+.env
+*.env
+.env.*
+!.env.example
+!apps/services/login/.env.example
+!apps/services/soap/.env.example
+
+apps/web-monolito/public/uploads/*
+logs/
+*.log
+# Volcado local de peticiones (contiene datos personales)
+lol.txt
+.DS_Store

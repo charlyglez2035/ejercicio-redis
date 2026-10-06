@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="estilo.css"?>
+<Library xmlns="http://library.services.example.com/soap">
+    <Books>
+        <Book>
+            <ISBN>9780307474728</ISBN>
+            <Title>One Hundred Years of Solitude</Title>
+            <Authors>
+                <Author>Gabriel Garcia Marquez</Author>
+            </Authors>
+            <PublicationYear>1967</PublicationYear>
+            <Category>Literature</Category>
+            <Genre>Novel</Genre>
+            <Price currency="USD">299.90</Price>
+            <Stock>15</Stock>
+            <Format>Hardcover</Format>
+            <Images>
+                <Image>
+                    <URL>https://example.com/images/one-hundred-years.jpg</URL>
+                    <AltText>One Hundred Years of Solitude book cover</AltText>
+                    <IsCover>true</IsCover>
+                </Image>
+            </Images>
+            <Concepts>
+                <Concept>
+                    <Name>Magical Realism</Name>
+                    <Definition>Use of fantastic or magical elements within an otherwise realistic narrative.</Definition>
+                </Concept>
+            </Concepts>
+        </Book>
+
+        <Book>
+            <ISBN>9780451524935</ISBN>
+            <Title>1984</Title>
+            <Authors>
+                <Author>George Orwell</Author>
+            </Authors>
+            <PublicationYear>1949</PublicationYear>
+            <Category>Literature</Category>
+            <Genre>Science Fiction</Genre>
+            <Price currency="USD">199.90</Price>
+            <Stock>20</Stock>
+            <Format>Paperback</Format>
+            <Images>
+                <Image>
+                    <URL>https://example.com/images/1984.jpg</URL>
+                    <AltText>1984 book cover</AltText>
+                    <IsCover>true</IsCover>
+                </Image>
+            </Images>
+            <Concepts>
+                <Concept>
+                    <Name>Totalitarianism</Name>
+                    <Definition>Political system characterized by extensive centralized control over society.</Definition>
+                </Concept>
+            </Concepts>
+        </Book>
+
+        <Book>
+            <ISBN>9780141439518</ISBN>
+            <Title>Pride and Prejudice</Title>
+            <Authors>
+                <Author>Jane Austen</Author>
+            </Authors>
+            <PublicationYear>1813</PublicationYear>
+            <Category>Literature</Category>
+            <Genre>Romance</Genre>
+            <Price currency="USD">179.90</Price>
+            <Stock>12</Stock>
+            <Format>Paperback</Format>
+            <Images>
+                <Image>
+                    <URL>https://example.com/images/pride-and-prejudice.jpg</URL>
+                    <AltText>Pride and Prejudice book cover</AltText>
+                    <IsCover>true</IsCover>
+                </Image>
+            </Images>
+            <Concepts>
+                <Concept>
+                    <Name>Social Class</Name>
+                    <Definition>The influence of social hierarchy and economic status on relationships.</Definition>
+                </Concept>
+            </Concepts>
+        </Book>
+
+        <Book>
+            <ISBN>9780553380163</ISBN>
+            <Title>A Brief History of Time</Title>
+            <Authors>
+                <Author>Stephen Hawking</Author>
+            </Authors>
+            <PublicationYear>1988</PublicationYear>
+            <Category>Science</Category>
+            <Genre>Popular Science</Genre>
+            <Price currency="USD">349.90</Price>
+            <Stock>8</Stock>
+            <Format>Hardcover</Format>
+            <Images>
+                <Image>
+                    <URL>https://example.com/images/brief-history-time.jpg</URL>
+                    <AltText>A Brief History of Time book cover</AltText>
+                    <IsCover>true</IsCover>
+                </Image>
+            </Images>
+            <Concepts>
+                <Concept>
+                    <Name>Cosmology</Name>
+                    <Definition>Scientific study of the origin, evolution and structure of the universe.</Definition>
+                </Concept>
+            </Concepts>
+        </Book>
+
+        <Book>
+            <ISBN>9780062316097</ISBN>
+            <Title>Sapiens</Title>
+            <Authors>
+                <Author>Yuval Noah Harari</Author>
+            </Authors>
+            <PublicationYear>2011</PublicationYear>
+            <Category>History</Category>
+            <Genre>Historical</Genre>
+            <Price currency="USD">399.90</Price>
+            <Stock>18</Stock>
+            <Format>Hardcover</Format>
+            <Images>
+                <Image>
+                    <URL>https://example.com/images/sapiens.jpg</URL>
+                    <AltText>Sapiens book cover</AltText>
+                    <IsCover>true</IsCover>
+                </Image>
+            </Images>
+            <Concepts>
+                <Concept>
+                    <Name>Human Evolution</Name>
+                    <Definition>Development and transformation of humans throughout history.</Definition>
+                </Concept>
+            </Concepts>
+        </Book>
+
+        <Book>
+            <ISBN>9780132350884</ISBN>
+            <Title>Clean Code</Title>
+            <Authors>
+                <Author>Robert C. Martin</Author>
+            </Authors>
+            <PublicationYear>2008</PublicationYear>
+            <Category>Technology</Category>
+            <Genre>Programming</Genre>
+            <Price currency="USD">599.90</Price>
+            <Stock>10</Stock>
+            <Format>Hardcover</Format>
+            <Images>
+                <Image>
+                    <URL>https://example.com/images/clean-code.jpg</URL>
+                    <AltText>Clean Code book cover</AltText>
+                    <IsCover>true</IsCover>
+                </Image>
+            </Images>
+            <Concepts>
+                <Concept>
+                    <Name>Clean Code</Name>
+                    <Definition>Principles for producing readable, maintainable and understandable software.</Definition>
+                </Concept>
+            </Concepts>
+        </Book>
+
+        <Book>
+            <ISBN>9780307887894</ISBN>
+            <Title>The Lean Startup</Title>
+            <Authors>
+                <Author>Eric Ries</Author>
+            </Authors>
+            <PublicationYear>2011</PublicationYear>
+            <Category>Business</Category>
+            <Genre>Business</Genre>
+            <Price currency="USD">329.90</Price>
+            <Stock>14</Stock>
+            <Format>Paperback</Format>
+            <Images>
+                <Image>
+                    <URL>https://example.com/images/lean-startup.jpg</URL>
+                    <AltText>The Lean Startup book cover</AltText>
+                    <IsCover>true</IsCover>
+                </Image>
+            </Images>
+            <Concepts>
+                <Concept>
+                    <Name>Lean Startup</Name>
+                    <Definition>Methodology for developing businesses through rapid experimentation and learning.</Definition>
+                </Concept>
+            </Concepts>
+        </Book>
+
+        <Book>
+            <ISBN>9781451648539</ISBN>
+            <Title>Steve Jobs</Title>
+            <Authors>
+                <Author>Walter Isaacson</Author>
+            </Authors>
+            <PublicationYear>2011</PublicationYear>
+            <Category>Biography</Category>
+            <Genre>Biography</Genre>
+            <Price currency="USD">449.90</Price>
+            <Stock>9</Stock>
+            <Format>Hardcover</Format>
+            <Images>
+                <Image>
+                    <URL>https://example.com/images/steve-jobs.jpg</URL>
+                    <AltText>Steve Jobs biography book cover</AltText>
+                    <IsCover>true</IsCover>
+                </Image>
+            </Images>
+            <Concepts>
+                <Concept>
+                    <Name>Innovation</Name>
+                    <Definition>Creation and implementation of new ideas, products or technologies.</Definition>
+                </Concept>
+            </Concepts>
+        </Book>
+
+        <Book>
+            <ISBN>9780807014271</ISBN>
+            <Title>Mans Search for Meaning</Title>
+            <Authors>
+                <Author>Viktor Frankl</Author>
+            </Authors>
+            <PublicationYear>1946</PublicationYear>
+            <Category>Philosophy</Category>
+            <Genre>Philosophy</Genre>
+            <Price currency="USD">229.90</Price>
+            <Stock>16</Stock>
+            <Format>Paperback</Format>
+            <Images>
+                <Image>
+                    <URL>https://example.com/images/mans-search-meaning.jpg</URL>
+                    <AltText>Mans Search for Meaning book cover</AltText>
+                    <IsCover>true</IsCover>
+                </Image>
+            </Images>
+            <Concepts>
+                <Concept>
+                    <Name>Meaning of Life</Name>
+                    <Definition>Exploration of purpose and meaning in human existence.</Definition>
+                </Concept>
+            </Concepts>
+        </Book>
+
+        <Book>
+            <ISBN>9780156012195</ISBN>
+            <Title>The Little Prince</Title>
+            <Authors>
+                <Author>Antoine de Saint-Exupery</Author>
+            </Authors>
+            <PublicationYear>1943</PublicationYear>
+            <Category>Literature</Category>
+            <Genre>Fantasy</Genre>
+            <Price currency="USD">159.90</Price>
+            <Stock>25</Stock>
+            <Format>Hardcover</Format>
+            <Images>
+                <Image>
+                    <URL>https://example.com/images/little-prince.jpg</URL>
+                    <AltText>The Little Prince book cover</AltText>
+                    <IsCover>true</IsCover>
+                </Image>
+            </Images>
+            <Concepts>
+                <Concept>
+                    <Name>Friendship</Name>
+                    <Definition>The themes of connection and relationship between characters.</Definition>
+                </Concept>
+            </Concepts>
+        </Book>
+    </Books>
+</Library>

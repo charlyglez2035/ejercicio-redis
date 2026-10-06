@@ -1,0 +1,45 @@
+.jwt-page { max-width: 1120px; margin: 0 auto; padding: 24px 0 48px; }
+.jwt-heading, .jwt-workbench-head, .jwt-console-head, .jwt-controls, .jwt-submit-row, .jwt-console-actions, .jwt-session-actions { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.jwt-heading { border-bottom: 1px solid #ccd4d2; padding-bottom: 18px; }
+.jwt-kicker { margin: 0 0 6px; color: #286557; font-size: 12px; font-weight: 700; }
+.jwt-heading h1 { margin: 0; font-size: 30px; }
+.jwt-state { border: 1px solid #9aa8a4; padding: 6px 10px; font-size: 13px; }
+.jwt-state.is-authenticated { background: #e0f1e9; border-color: #63917f; color: #14533f; }
+.jwt-auth { display: flex; align-items: end; justify-content: space-between; gap: 22px; padding: 20px 0; border-bottom: 1px solid #ccd4d2; }
+.jwt-login { display: flex; align-items: end; gap: 12px; flex: 1; }
+.jwt-login label, .jwt-controls label { display: grid; gap: 5px; flex: 1; font-size: 13px; font-weight: 600; }
+.jwt-login input, .jwt-controls input, .jwt-controls select { width: 100%; min-width: 0; }
+.jwt-page button { white-space: nowrap; }
+.jwt-workbench { padding: 20px 0 24px; border-bottom: 1px solid #ccd4d2; }
+.jwt-workbench h2, .jwt-console h2 { margin: 0; font-size: 19px; }
+.jwt-controls { justify-content: start; max-width: 620px; margin: 14px 0; }
+.jwt-controls label:first-child { max-width: 150px; }
+.jwt-payload-label { display: block; margin: 10px 0 5px; font-size: 13px; font-weight: 600; }
+#payload { display: block; width: 100%; min-height: 180px; resize: vertical; font: 13px/1.5 Consolas, monospace; }
+.jwt-submit-row { align-items: flex-end; margin-top: 12px; }
+.jwt-demo-options { display: grid; gap: 7px; margin-right: auto; }
+.jwt-checkbox { display: flex; align-items: center; gap: 8px; margin-right: auto; font-size: 13px; }
+.jwt-checkbox input { width: 16px; height: 16px; }
+.jwt-inline-status { min-height: 20px; margin: 8px 0 0; color: #55625f; font-size: 13px; }
+.jwt-console { padding-top: 20px; }
+.jwt-console-head { margin-bottom: 12px; }
+.jwt-console-head > div:first-child { display: flex; align-items: baseline; gap: 12px; }
+#request-count { color: #586562; font-size: 12px; }
+.jwt-console-actions button { padding: 7px 10px; background: #f3f5f3; color: #243431; border: 1px solid #b8c2be; }
+.jwt-log { display: grid; gap: 9px; margin: 0; padding: 0; list-style: none; }
+.jwt-log-entry { border: 1px solid #cbd4d1; background: #fff; }
+.jwt-log-entry summary { display: flex; align-items: center; gap: 10px; padding: 10px 12px; cursor: pointer; list-style-position: inside; font-size: 13px; }
+.jwt-log-entry summary time { color: #52615d; }
+.jwt-log-entry .jwt-status-code { min-width: 42px; font-weight: 700; }
+.jwt-log-entry.is-error .jwt-status-code { color: #a2342e; }
+.jwt-log-entry pre { overflow: auto; max-height: 310px; margin: 0; padding: 12px; border-top: 1px solid #d4dcda; background: #f7f9f8; white-space: pre-wrap; overflow-wrap: anywhere; font: 12px/1.5 Consolas, monospace; }
+@media (max-width: 720px) {
+  .jwt-page { padding-top: 12px; }
+  .jwt-heading, .jwt-auth { align-items: stretch; flex-direction: column; }
+  .jwt-login { flex-direction: column; align-items: stretch; }
+  .jwt-login label { width: 100%; }
+  .jwt-session-actions { justify-content: flex-start; }
+  .jwt-console-head { align-items: flex-start; flex-direction: column; }
+  .jwt-console-head > div:first-child { flex-wrap: wrap; }
+  .jwt-log-entry summary { flex-wrap: wrap; }
+}

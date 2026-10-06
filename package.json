@@ -1,0 +1,20 @@
+{
+	"name": "library-web-monolith",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Servidor MVC para administrar una libreria con PostgreSQL",
+	"main": "apps/web-monolito/src/server.js",
+	"scripts": {
+		"start": "node apps/web-monolito/src/server.js",
+		"dev": "node --watch apps/web-monolito/src/server.js"
+	},
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"dotenv": "^16.6.1",
+		"ejs": "^3.1.10",
+		"express": "^5.1.0",
+		"express-session": "^1.18.2",
+		"multer": "^2.0.2",
+		"pg": "^8.16.3"
+	}
+}

@@ -1,0 +1,35 @@
+{
+  "name": "remote",
+  "base_url": "http://34.51.65.146:5001",
+  "isbn": "9781790115389",
+  "steps": {
+    "health": {
+      "status": null,
+      "error": "<urlopen error timed out>"
+    },
+    "POST": {
+      "status": null,
+      "error": "<urlopen error timed out>"
+    },
+    "GET_after_POST": {
+      "status": null,
+      "error": "<urlopen error timed out>"
+    },
+    "PATCH": {
+      "status": null,
+      "error": "<urlopen error timed out>"
+    },
+    "GET_after_PATCH": {
+      "status": null,
+      "error": "<urlopen error timed out>"
+    },
+    "DELETE": {
+      "status": null,
+      "error": "<urlopen error timed out>"
+    },
+    "GET_after_DELETE": {
+      "status": null,
+      "error": "<urlopen error timed out>"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+# Normaliza finales de linea a LF para que scripts y .env funcionen en la VM Linux.
+* text=auto
+*.sh text eol=lf
+*.py text eol=lf
+*.sql text eol=lf
+*.png binary
+*.jpg binary
+*.pdf binary
